@@ -1,0 +1,19 @@
+- request:
+    method: GET
+    url: /test
+  response:
+    status: 200
+    headers:
+      content-type: application/json
+    body: >
+     {"test", "all mockup may be OK !"}
+
+- request:
+    method: GET
+    url: /test-file
+  response:
+    status: 200
+    headers:
+      content-type: application/json
+    file: json/test/ok.json
+
