@@ -1,29 +1,36 @@
 # stubby-mockup-api
 
-simple create you own API mockup hosting.
+Simple create you own API mockup hosting. That operated by [Stubby4j](https://stubby4j.com/).
 
 
 ## Prerequisite
 
-Easiest way, please use Docker Desktop for development mode.
+Easiest way, please use [Docker Desktop](https://www.docker.com/products/docker-desktop/) for development. This project contains `Dockerfile` that already config for stubby.
 
+---
 
 ## Setup in 3-step
 
-**step 1** config API spec in `response/stubs.yaml`.
+#### step 1:
 
-**step 2** mock json response in `/response/json` directory.
+config API spec in `response/stubs.yaml`.
 
-**step 3** start your docker image.
+#### step 2: 
+
+mock json response in `/response/json` directory.
+
+#### step 3: 
+
+start your docker image.
+
+---
 
 
 ## Test your mockup
 
-- Execute your API to get stubbed response with hostname http://localhost:8882/ such as http://localhost:8882/test.
+
+- Execute your API to get stubbed response with hostname http://localhost:8882/ following with configured stubs.
 - The admin portal also available here. [http://localhost:8889/status](http://localhost:8889/status)
-
-
-example.
 
 ```
 curl --location --request POST 'http://localhost:8882/test'
