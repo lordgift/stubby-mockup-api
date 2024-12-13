@@ -1,4 +1,4 @@
-FROM azagniotov/stubby4j:latest-jre11
+FROM azagniotov/stubby4j:latest-jre21
 
 LABEL Maintainer=LordGift
 
