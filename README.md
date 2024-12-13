@@ -21,13 +21,11 @@ mock json response in `/response/json` directory.
 
 #### step 3: 
 
-start your docker image.
+start your docker compose.
 
 ---
 
-
 ## Test your mockup
-
 
 - Execute your API to get stubbed response with hostname http://localhost:8882/ following with configured stubs.
 - The admin portal also available here. [http://localhost:8889/status](http://localhost:8889/status)
@@ -35,7 +33,16 @@ start your docker image.
 ```
 curl --location --request POST 'http://localhost:8882/test'
 ```
-
-
-
 ----
+
+## Ngrok also available
+
+For expose to internet, I also provide it with Ngrok. Please update `<your-authtoken>` in [ngrok.yaml](./ngrok.yaml).
+
+please visit http://localhost:4040 to see ngrok domains for stubby admin portal and mockup api.
+
+
+```
+curl --location --request POST 'https://<random-subdomain>.ngrok-free.app'
+```
+

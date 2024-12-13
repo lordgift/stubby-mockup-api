@@ -6,11 +6,13 @@ services:
       - 8889:8889
   ngrok:
     image: ngrok/ngrok:latest
+    restart: unless-stopped
     command:
-      - "http"
-      - "stubby-mockup:8882"
-    environment:
-      NGROK_AUTHTOKEN: <your-authtoken>
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./ngrok.yaml:/etc/ngrok.yml
     ports:
       - 4040:4040
-    
