@@ -1,0 +1,16 @@
+services:
+  stubby-mockup:
+    image: stubby-mockup:latest
+    ports:
+      - 8882:8882
+      - 8889:8889
+  ngrok:
+    image: ngrok/ngrok:latest
+    command:
+      - "http"
+      - "stubby-mockup:8882"
+    environment:
+      NGROK_AUTHTOKEN: <your-authtoken>
+    ports:
+      - 4040:4040
+    
